@@ -1,0 +1,19 @@
+<div class="container border mt-3 p-3">
+  <h1 class="fw-bolder display-4 text-center">Cursos Gratuitos</h1>
+  <div class="row">
+   <app-cadastro-curso (cursoAdicionado)="onCursoAdicionado($event)"></app-cadastro-curso>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <button (click)="alterarExibicao()" class="btn btn-primary mt-2 mb-2 w-100">{{textoBotao}}</button>
+    </div>
+  </div>
+
+  <div *ngIf="esconder" class="row mt-2">
+    <div class="col-md-4" *ngFor="let curso of cursos">
+      <app-cartao-curso [curso]="curso"></app-cartao-curso>
+    </div>
+  </div>
+
+</div>

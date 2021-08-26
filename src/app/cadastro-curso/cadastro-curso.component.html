@@ -1,0 +1,19 @@
+  
+    
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="cursoInput">Curso: </label>
+        <input type="text" class="form-control" id="nomeInput" #cursoInput>
+      </div>
+    </div>
+      
+    <div class="col-md-6">
+        <div class="form-group">
+          <label for="cargaInput">Carga: </label>
+          <input type="text" class="form-control" id="cargaInput" #cargaInput>
+        </div>
+    </div>
+
+    <div class="col-12 mt-2">
+      <button (click)="adicionar(cursoInput.value, cargaInput.value)" class="w-100 btn btn-outline-primary" type="button">Cadastrar</button>
+    </div>
